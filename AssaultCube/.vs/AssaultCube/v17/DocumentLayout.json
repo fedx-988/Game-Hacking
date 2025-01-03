@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|solutionrelative:AssaultCube\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp",
+              "RelativeDocumentMoniker": "AssaultCube\\main.cpp",
+              "ToolTip": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp",
+              "RelativeToolTip": "AssaultCube\\main.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-03T06:30:26.788Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
