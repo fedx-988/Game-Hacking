@@ -1,12 +1,13 @@
 ﻿  main.cpp
-C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\AssaultCube\main.cpp(18,39): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
-C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\AssaultCube\main.cpp(18,39): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
-C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\AssaultCube\main.cpp(50,38): warning C4312: 'type cast': conversion from 'unsigned long' to 'LPVOID' of greater size
-C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\AssaultCube\main.cpp(54,42): warning C4312: 'type cast': conversion from 'unsigned long' to 'LPVOID' of greater size
-C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\AssaultCube\main.cpp(72,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(19,39): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(19,39): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(51,38): warning C4312: 'type cast': conversion from 'unsigned long' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(74,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(81,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\AssaultCube\main.cpp(88,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
   Generating code
-  0 of 86 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  2 of 13 functions (15.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  AssaultCube.vcxproj -> C:\Users\IndianSkibidiRizz\source\repos\AssaultCube\x64\Release\AssaultCube.exe
+  AssaultCube.vcxproj -> C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultCube\x64\Release\AssaultCube.exe

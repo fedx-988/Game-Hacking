@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\",
+  "WorkspaceRootPath": "C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\offsets.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|solutionrelative:AssaultCube\\offsets.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7B30972D-8E04-4FEE-90D6-DA6A161BD641}|AssaultCube\\AssaultCube.vcxproj|solutionrelative:AssaultCube\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "offsets.h",
+              "DocumentMoniker": "C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\offsets.h",
+              "RelativeDocumentMoniker": "AssaultCube\\offsets.h",
+              "ToolTip": "C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\offsets.h",
+              "RelativeToolTip": "AssaultCube\\offsets.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-03T08:07:22.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\main.cpp",
               "RelativeDocumentMoniker": "AssaultCube\\main.cpp",
-              "ToolTip": "C:\\Users\\IndianSkibidiRizz\\source\\repos\\AssaultCube\\AssaultCube\\main.cpp",
+              "ToolTip": "C:\\Users\\IndianSkibidiRizz\\Documents\\GitHub\\Game-Hacking\\AssaultCube\\AssaultCube\\main.cpp",
               "RelativeToolTip": "AssaultCube\\main.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAEAAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAADwv0YAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-03T06:30:26.788Z",
               "EditorCaption": ""

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <tchar.h> // _tcscmp
 #include <vector>
+#include "offsets.h" // Include the offsets header
 
 DWORD GetModuleBaseAddress(TCHAR* lpszModuleName, DWORD pID) {
     DWORD dwModuleBaseAddress = 0;
@@ -43,34 +44,48 @@ int main() {
 
     TCHAR gameName[] = _T("ac_client.exe"); // Use TCHAR for compatibility
     DWORD gameBaseAddress = GetModuleBaseAddress(gameName, pID);
-    DWORD offsetGameToBaseAddress = 0x00195404;
-    std::vector<DWORD> pointsOffsets{ 0x12C };
+
+    // Calculate base address using offsets from offsets.h
     DWORD baseAddress = NULL;
-    //Get value at gamebase+offset -> store it in baseAddress
-    ReadProcessMemory(processHandle, (LPVOID)(gameBaseAddress + offsetGameToBaseAddress), &baseAddress, sizeof(baseAddress), NULL);
-    DWORD pointsAddress = baseAddress; // The address we need - > change now while going through offsets
-    for (int i = 0; i < pointsOffsets.size() - 1; i++) // -1 because we dont want the value at the last offset
-    { 
-        ReadProcessMemory(processHandle, (LPVOID)(pointsAddress + pointsOffsets.at(i)), &pointsAddress, sizeof(pointsAddress), NULL);
-        std::cout << "Debug Info: Value at offset = " << std::hex << pointsAddress << std::endl;
-    }
-    pointsAddress += pointsOffsets.at(pointsOffsets.size() - 1); // Add last offset -> done!
+
+    ReadProcessMemory(processHandle, (LPVOID)(gameBaseAddress + BASE_OFFSET), &baseAddress, sizeof(baseAddress), NULL);
+
+    DWORD pointsAddress = baseAddress + PISTOL_AMMO_OFFSET; // The address we need for ammo
+    DWORD healthAddress = baseAddress + HEALTH_OFFSET; // The address we need for health
+    DWORD arAmmoAddress = baseAddress + AR_AMMO_OFFSET; // Calculate AR ammo address
 
     //"UI"
     std::cout << "Assault Cube - fedx" << std::endl;
     std::cout << "Press the DELETE key to EXIT" << std::endl;
     std::cout << "Press the Up Arrow key to set Ammo" << std::endl;
+    std::cout << "Press the Down Arrow key to set Health" << std::endl;
+    std::cout << "Press the Left Arrow key to set AR Ammo" << std::endl; // New option
+
     while (true) {
         Sleep(50);
         if (GetAsyncKeyState(VK_DELETE)) { // Exit
             return 0;
         }
-        if (GetAsyncKeyState(VK_UP)) {
+
+        if (GetAsyncKeyState(VK_UP)) { // Modify Ammo
             std::cout << "How much ammo do you want?" << std::endl;
-            int newPoints = 0;
-            std::cin >> newPoints;
-            WriteProcessMemory(processHandle, (LPVOID)(pointsAddress), &newPoints, 4, 0);
+            int newPistolAmmo = 0;
+            std::cin >> newPistolAmmo;
+            WriteProcessMemory(processHandle, (LPVOID)(pointsAddress), &newPistolAmmo, sizeof(newPistolAmmo), NULL);
+        }
+
+        if (GetAsyncKeyState(VK_DOWN)) { // Modify Health
+            std::cout << "How much health do you want?" << std::endl;
+            int newHealth = 0;
+            std::cin >> newHealth;
+            WriteProcessMemory(processHandle, (LPVOID)(healthAddress), &newHealth, sizeof(newHealth), NULL);
+        }
+
+        if (GetAsyncKeyState(VK_LEFT)) { // Modify AR Ammo
+            std::cout << "How much AR ammo do you want?" << std::endl;
+            int newARAmmo = 0;
+            std::cin >> newARAmmo;
+            WriteProcessMemory(processHandle, (LPVOID)(arAmmoAddress), &newARAmmo, sizeof(newARAmmo), NULL);
         }
     }
-
 }
