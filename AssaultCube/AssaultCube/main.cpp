@@ -59,7 +59,7 @@ int main() {
     std::cout << "Press the DELETE key to EXIT" << std::endl;
     std::cout << "Press the Up Arrow key to set Ammo" << std::endl;
     std::cout << "Press the Down Arrow key to set Health" << std::endl;
-    std::cout << "Press the Left Arrow key to set AR Ammo" << std::endl; // New option
+    std::cout << "Press the Left Arrow key to set AR Ammo" << std::endl;
 
     while (true) {
         Sleep(50);
