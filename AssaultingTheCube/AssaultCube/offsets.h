@@ -8,5 +8,6 @@ const DWORD AR_AMMO_OFFSET = 0x140;           // Offset for AR ammo
 const DWORD GRENADE_AMMO_OFFSET = 0x144;      // Offset for grenade ammo
 const DWORD DUAL_PISTOL_AMMO_OFFSET = 0x148;  // Offset for dual pistols ammo
 const DWORD ARMOUR_OFFSET = 0xF0;			  // Offset for armour
+const DWORD PLAYER_COUNT_OFFSET = 0x0005C434; // Offset for armour
 
 #endif // OFFSETS_H

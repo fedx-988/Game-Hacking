@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(21,39): warning C4311: 'type cast': pointer truncation from 'BYTE *' to 'DWORD'
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(21,39): warning C4302: 'type cast': truncation from 'BYTE *' to 'DWORD'
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(32,38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(69,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(73,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(77,47): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(102,51): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(109,55): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(113,55): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(117,55): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(167,38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(170,38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\AssaultCube\main.cpp(173,38): warning C4312: 'type cast': conversion from 'DWORD' to 'LPVOID' of greater size
+  Generating code
+  4 of 17 functions (23.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  AssaultCube.vcxproj -> C:\Users\IndianSkibidiRizz\Documents\GitHub\Game-Hacking\AssaultingTheCube\x64\Release\AssaultCube.exe
