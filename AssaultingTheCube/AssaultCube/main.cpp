@@ -3,24 +3,24 @@
 #include <iostream>
 #include <tchar.h> // _tcscmp
 #include <vector>
-#include <thread> // For std::thread
-#include "offsets.h" // Include the offsets header
+#include <thread> 
+#include "offsets.h" 
 
 DWORD GetModuleBaseAddress(TCHAR* lpszModuleName, DWORD pID) {
     DWORD dwModuleBaseAddress = 0;
-    HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pID); // make snapshot of all modules within process
+    HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, pID);
     MODULEENTRY32 ModuleEntry32 = { 0 };
     ModuleEntry32.dwSize = sizeof(MODULEENTRY32);
 
-    if (Module32First(hSnapshot, &ModuleEntry32)) // store first Module in ModuleEntry32
+    if (Module32First(hSnapshot, &ModuleEntry32))
     {
         do {
-            if (_tcscmp(ModuleEntry32.szModule, lpszModuleName) == 0) // if Found Module matches Module we look for -> done!
+            if (_tcscmp(ModuleEntry32.szModule, lpszModuleName) == 0)
             {
                 dwModuleBaseAddress = (DWORD)ModuleEntry32.modBaseAddr;
                 break;
             }
-        } while (Module32Next(hSnapshot, &ModuleEntry32)); // go through Module entries in Snapshot and store in ModuleEntry32
+        } while (Module32Next(hSnapshot, &ModuleEntry32)); 
     }
     CloseHandle(hSnapshot);
     return dwModuleBaseAddress;
@@ -33,7 +33,7 @@ void ClearConsole() {
 
 // Function to display the menu
 void DisplayMenu(bool healthRegenerationActive, const std::string& regenStatus) {
-    ClearConsole(); // Clear the console before displaying the menu
+    ClearConsole();
     std::cout << "Assault Cube - fedx" << std::endl;
     std::cout << "----------------------------------------------" << std::endl;
     std::cout << "Press the DELETE key to EXIT" << std::endl;
@@ -44,9 +44,8 @@ void DisplayMenu(bool healthRegenerationActive, const std::string& regenStatus) 
     std::cout << "Press F1 to set Dual Pistols Ammo" << std::endl;
     std::cout << "Press F2 to set Armour" << std::endl;
 
-    // Display health regeneration status
     if (healthRegenerationActive) {
-        std::cout << regenStatus << std::endl; // Show regenerating status or regenerated message
+        std::cout << regenStatus << std::endl; 
     }
     else {
         std::cout << "Press F3 to regenerate your health" << std::endl;
@@ -61,10 +60,10 @@ void HealthRegeneration(HANDLE processHandle, DWORD healthAddress, bool* active)
         if (currentHealth < 100) {
             currentHealth += 10;
             WriteProcessMemory(processHandle, (LPVOID)(healthAddress), &currentHealth, sizeof(currentHealth), NULL);
-            Sleep(1000); // Wait for 1 second before adding more health
+            Sleep(1000);
         }
         else {
-            *active = false; // Stop regeneration if health is at max
+            *active = false;
         }
     }
 }
@@ -86,86 +85,85 @@ int main() {
         return 0;
     }
 
-    TCHAR gameName[] = _T("ac_client.exe"); // Use TCHAR for compatibility
+    TCHAR gameName[] = _T("ac_client.exe");
     DWORD gameBaseAddress = GetModuleBaseAddress(gameName, pID);
 
-    // Calculate base address using offsets from offsets.h
     DWORD baseAddress = NULL;
 
     ReadProcessMemory(processHandle, (LPVOID)(gameBaseAddress + BASE_OFFSET), &baseAddress, sizeof(baseAddress), NULL);
 
-    DWORD pointsAddress = baseAddress + PISTOL_AMMO_OFFSET;      // The address we need for pistol ammo
-    DWORD healthAddress = baseAddress + HEALTH_OFFSET;            // The address we need for health
-    DWORD arAmmoAddress = baseAddress + AR_AMMO_OFFSET;          // Calculate AR ammo address
-    DWORD grenadeAmmoAddress = baseAddress + GRENADE_AMMO_OFFSET; // Calculate grenade count address
-    DWORD dualPistolAmmoAddress = baseAddress + DUAL_PISTOL_AMMO_OFFSET; // Calculate dual pistols ammo address
-    DWORD armourAddress = baseAddress + ARMOUR_OFFSET;           // Calculate armour address
+    DWORD pointsAddress = baseAddress + PISTOL_AMMO_OFFSET;
+    DWORD healthAddress = baseAddress + HEALTH_OFFSET;
+    DWORD arAmmoAddress = baseAddress + AR_AMMO_OFFSET;
+    DWORD grenadeAmmoAddress = baseAddress + GRENADE_AMMO_OFFSET;
+    DWORD dualPistolAmmoAddress = baseAddress + DUAL_PISTOL_AMMO_OFFSET;
+    DWORD armourAddress = baseAddress + ARMOUR_OFFSET;
 
-    DisplayMenu(false, ""); // Show initial menu
+    DisplayMenu(false, "");
 
-    bool healthRegenerationActive = false; // Track health regeneration status
+    bool healthRegenerationActive = false;
 
     while (true) {
         Sleep(50);
-        if (GetAsyncKeyState(VK_DELETE)) { // Exit
+        if (GetAsyncKeyState(VK_DELETE)) {
             return 0;
         }
 
-        if (GetAsyncKeyState(VK_UP)) { // Modify Pistol Ammo
+        if (GetAsyncKeyState(VK_UP)) {
             std::cout << "How much Pistol Ammo do you want?" << std::endl;
             int newPistolAmmo = 0;
             std::cin >> newPistolAmmo;
             WriteProcessMemory(processHandle, (LPVOID)(pointsAddress), &newPistolAmmo, sizeof(newPistolAmmo), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_DOWN)) { // Modify Health
+        if (GetAsyncKeyState(VK_DOWN)) {
             std::cout << "How much Health do you want?" << std::endl;
             int newHealth = 0;
             std::cin >> newHealth;
             WriteProcessMemory(processHandle, (LPVOID)(healthAddress), &newHealth, sizeof(newHealth), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_LEFT)) { // Modify AR Ammo
+        if (GetAsyncKeyState(VK_LEFT)) {
             std::cout << "How much AR ammo do you want?" << std::endl;
             int newARAmmo = 0;
             std::cin >> newARAmmo;
             WriteProcessMemory(processHandle, (LPVOID)(arAmmoAddress), &newARAmmo, sizeof(newARAmmo), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_RIGHT)) { // Modify Grenade Ammo
+        if (GetAsyncKeyState(VK_RIGHT)) {
             std::cout << "How many Grenades do you want?" << std::endl;
             int newGrenadeAmmo = 0;
             std::cin >> newGrenadeAmmo;
             WriteProcessMemory(processHandle, (LPVOID)(grenadeAmmoAddress), &newGrenadeAmmo, sizeof(newGrenadeAmmo), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_F1)) { // Modify Dual Pistols Ammo
+        if (GetAsyncKeyState(VK_F1)) {
             std::cout << "How much Dual Pistol ammo do you want?" << std::endl;
             int newDualPistolAmmo = 0;
             std::cin >> newDualPistolAmmo;
             WriteProcessMemory(processHandle, (LPVOID)(dualPistolAmmoAddress), &newDualPistolAmmo, sizeof(newDualPistolAmmo), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_F2)) { // Modify Armour
+        if (GetAsyncKeyState(VK_F2)) {
             std::cout << "How much Armour do you want?" << std::endl;
             int newArmour = 0;
             std::cin >> newArmour;
             WriteProcessMemory(processHandle, (LPVOID)(armourAddress), &newArmour, sizeof(newArmour), NULL);
-            Sleep(2000); // Wait for 2 seconds
-            DisplayMenu(healthRegenerationActive, ""); // Clear and show menu again
+            Sleep(2000);
+            DisplayMenu(healthRegenerationActive, "");
         }
 
-        if (GetAsyncKeyState(VK_F3)) { // Toggle Health Regeneration on/off
+        if (GetAsyncKeyState(VK_F3)) {
 
             healthRegenerationActive = !healthRegenerationActive;
 
