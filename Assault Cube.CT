@@ -4,7 +4,6 @@
     <CheatEntry>
       <ID>46</ID>
       <Description>"X-Axis (pointer)"</Description>
-      <LastState Value="150.3375854" RealAddress="0087EF80"/>
       <Color>0000FF</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+0017E0A8</Address>
@@ -15,7 +14,6 @@
     <CheatEntry>
       <ID>42</ID>
       <Description>"Y-Axis (pointer)"</Description>
-      <LastState Value="83.78553772" RealAddress="0087EF84"/>
       <Color>008000</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -31,7 +29,6 @@
     <CheatEntry>
       <ID>54</ID>
       <Description>"Z-Axis (pointer)"</Description>
-      <LastState Value="3" RealAddress="0087EF88"/>
       <Color>FFFF00</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+0017E0A8</Address>
@@ -42,7 +39,6 @@
     <CheatEntry>
       <ID>57</ID>
       <Description>"X-Axis Camera"</Description>
-      <LastState Value="129.6365204" RealAddress="0087EF8C"/>
       <Color>8080FF</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -55,7 +51,6 @@
     <CheatEntry>
       <ID>60</ID>
       <Description>"X-Axis Camera"</Description>
-      <LastState Value="129.6365204" RealAddress="0087EF8C"/>
       <Color>8080FF</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -70,7 +65,6 @@
     <CheatEntry>
       <ID>63</ID>
       <Description>"X-Axis Camera"</Description>
-      <LastState Value="129.6365204" RealAddress="0087EF8C"/>
       <Color>8080FF</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -84,7 +78,6 @@
     <CheatEntry>
       <ID>66</ID>
       <Description>"X-Axis Camera"</Description>
-      <LastState Value="129.6365204" RealAddress="0087EF8C"/>
       <Color>8080FF</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -98,7 +91,6 @@
     <CheatEntry>
       <ID>71</ID>
       <Description>"Z-Axis Camera"</Description>
-      <LastState Value="-16.72727203" RealAddress="0087EF90"/>
       <Color>FF8000</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -111,7 +103,6 @@
     <CheatEntry>
       <ID>74</ID>
       <Description>"Z-Axis Camera"</Description>
-      <LastState Value="-16.72727203" RealAddress="0087EF90"/>
       <Color>FF8000</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -124,7 +115,6 @@
     <CheatEntry>
       <ID>86</ID>
       <Description>"Z-Axis Camera"</Description>
-      <LastState Value="-16.72727203" RealAddress="0087EF90"/>
       <Color>FF8000</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -139,7 +129,6 @@
     <CheatEntry>
       <ID>89</ID>
       <Description>"Z-Axis Camera"</Description>
-      <LastState Value="-16.72727203" RealAddress="0087EF90"/>
       <Color>FF8000</Color>
       <VariableType>Float</VariableType>
       <Address>"ac_client.exe"+00183828</Address>
@@ -154,7 +143,6 @@
     <CheatEntry>
       <ID>91</ID>
       <Description>"Health (pointer)"</Description>
-      <LastState Value="100" RealAddress="0087F044"/>
       <Color>8000FF</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>"ac_client.exe"+0017E0A8</Address>
