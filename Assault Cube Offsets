@@ -1,0 +1,12 @@
+Here are some offsets I've gathered myself from Cheat Engine throughout the past few hours.
+
+--------------------------------------------------------------------------------
+| Type   | Base Address               | Offsets                                |
+| ------ | -------------------------- | -------------------------------------- |
+| X Axis | `ac_client.exe + 0x17E0A8` | `[0x28]`                               |
+| Y Axis | `ac_client.exe + 0x183828` | `[0x8, 0x34, 0x30, 0x30, 0x30, 0x5FC]` |
+| Z Axis | `ac_client.exe + 0x17E0A8` | `[0x30]`                               |
+| Health | `ac_client.exe + 0x17E0A8` | `[0xEC]`                               |
+| Camera X Degree | `ac_client.exe + 0x183828` | `[0x8, 0xA80, 0x148]`         |
+| Camera Z Degree | `ac_client.exe + 0x183828` | `[0x8, 0x6F4, 0x820]`         |
+--------------------------------------------------------------------------------
