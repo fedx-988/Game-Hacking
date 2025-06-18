@@ -1,12 +1,25 @@
-Here are some offsets I've gathered myself from Cheat Engine throughout the past few hours.
+Here are some offsets I've gathered myself from Cheat Engine
 
---------------------------------------------------------------------------------
-| Type   | Base Address               | Offsets                                |
-| ------ | -------------------------- | -------------------------------------- |
-| X Axis | `ac_client.exe + 0x17E0A8` | `[0x28]`                               |
-| Y Axis | `ac_client.exe + 0x183828` | `[0x8, 0x34, 0x30, 0x30, 0x30, 0x5FC]` |
-| Z Axis | `ac_client.exe + 0x17E0A8` | `[0x30]`                               |
-| Health | `ac_client.exe + 0x17E0A8` | `[0xEC]`                               |
-| Camera X Degree | `ac_client.exe + 0x183828` | `[0x8, 0xA80, 0x148]`         |
-| Camera Z Degree | `ac_client.exe + 0x183828` | `[0x8, 0x6F4, 0x820]`         |
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+| Type            | Base Address               | Offsets                                |
+| --------------- | -------------------------- | ---------------------------------------|
+| X Axis          | ac_client.exe + 0x17E0A8   | [0x28]                                 |
+| Y Axis          | ac_client.exe + 0x183828   | [0x8, 0x34, 0x30, 0x30, 0x30, 0x5FC]   |
+| Z Axis          | ac_client.exe + 0x17E0A8   | [0x30]                                 |
+| Health          | ac_client.exe + 0x17E0A8   | [0xEC]                                 |
+| Kills           | ac_client.exe + 0x17E0A8   | [0x1DC]                                |
+| Team            | ac_client.exe + 0x17E0A8   | [0x30C]                                |
+| Camera X Degree | ac_client.exe + 0x183828   | [0x8, 0xA80, 0x148]                    |
+| Camera Z Degree | ac_client.exe + 0x183828   | [0x8, 0x6F4, 0x820]                    |
+| Yaw             | ac_client.exe + 0x183828   | [0x8, 0xA80, 0x148]                    |
+| Entity List     | ac_client.exe + 0x18AC04   | []                                     |
+| Player Count    | ac_client.exe + 0x18AC0C   | []                                     |
+| Entity X        | entityPtr + 0x28           | []                                     |
+| Entity Y        | entityPtr + 0x2C           | []                                     |
+| Entity Z        | entityPtr + 0x30           | []                                     |
+| Entity Health   | entityPtr + 0xEC           | []                                     |
+| Entity Yaw      | entityPtr + 0x34           | []                                     |
+| Entity Kills    | entityPtr + 0x1DC          | []                                     |
+| Entity Team     | entityPtr + 0x30C          | []                                     |
+| Entity Name     | entityPtr + 0x205          | []                                     |
+----------------------------------------------------------------------------------------
